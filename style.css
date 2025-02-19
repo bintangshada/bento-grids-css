@@ -1,0 +1,39 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box{
+    background-color: blue;
+}
+
+.grid-container{
+    display: grid;
+    grid-auto-columns: 200px;
+    grid-auto-rows: 200px;
+    gap: 1em;
+    grid-template-areas: 
+    "box-1 box-2 box-2 box-3"
+    "box-1 box-4 box-5 box-5";
+}
+
+@media(max-width: 56em){
+    .grid-container{
+        grid-template-areas: 
+        "box-1 box-1 box-2"
+        "box-1 box-1 box-3"
+        "box-4 box-5 box-5";
+    }
+}
+
+@media(max-width: 42em){
+    .grid-container{
+        grid-template-areas: 
+        "box-1 box-2"
+        "box-3 box-2"
+        "box-3 box-5"
+        "box-4 box-5";
+    }
+}
+
